@@ -44,7 +44,7 @@ while flag == 1
     B = problemEB(C,neta,tau,C_min,STO);                         % Problem EB solved to get new B
     S = problemES(D,l1,l2);                                      % Problem ES solved to get new S
     buyer = [buyer;B];
-    seller = [seller,S];
+    seller = [seller;S];
     RDB = mean2((abs(B - B_prev))./B);                           % RDB calculation for convergence check
     RDS = mean2((abs(S - S_prev))./S);                           % RDS calculation for convergence check
     disp(t)
